@@ -1,4 +1,4 @@
-package homework1;
+package n_lizard_with_tree;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Random;
 
-public class Homework {
+public class Project {
 	
 	private static final String I_NAME = "input.txt";
 	private static final String O_NAME = "output.txt";
@@ -145,6 +145,7 @@ public class Homework {
 		for (int iter = 0; iter < MAX_ITERATION; iter++) {
 	        System.out.println("Iteration " + iter);
 			if (!saInitial()) { fail(); return; }
+	        if (check()) { succeed(); return; }
 			double t = T_MAX;
 			
 		    while (t > T_MIN) {
